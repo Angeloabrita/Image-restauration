@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FOR SEO META -->
+    <link rel="shortcut icon" href="../static/assets/logo.png" type="image/x-icon">
+
+    <!-- OPEN GRAPH -->
+
+    <!-- style  -->
+    <link rel="stylesheet" href="../static/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- konvas framework -->
+    <script src="https://unpkg.com/konva@8.2.3/konva.min.js" ></script>
+
+    <title>Image Recovery</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Image restauration</h1>
+            <p>The image restauration has the capacity for restoure old image usualy the machine learning and computer vision algoritimy</p>
+        </div>
+        
+        <a href="https://www.facebook.com/agtastudios"><img src="../static/assets/logo.png" alt="AGTA Studios logo" id="resultImg" title="AGTA STUDIOS"></a>
+    </header>
+
+    <section>
+        
+        <div id="container" class="container shadow"">
+
+            
+            <div class="captions" >
+
+                <label for="fileInput" class="shadow label">add image</label><br>
+
+                
+                <p id="rangeValue">Stroke painter</p>
+                <input type="range" min="5" max="30" value="5" name="range" id="range" class="sliderBar"><br>
+                <input class="button" type="file" id="fileInput" name="fileInput"  accept="image/*" /><br>
+                <input type="hidden" id="tk" value="{{ csrf_token() }}">
+                <button id="btn" class="button shadow">restaure</button><br>
+                <button id="btnClear" class="button shadow">Clear</button>
+               
+            </div>
+            
+            <!-- canvas conponent from konvaJs -->
+            <div id="konva" class="shadow"></div>
+
+            <!-- donwload component it hide for defaut -->
+            <div id="donwloadContainer" style="grid-column: 2; grid-row: 2;">
+                <p>Your image has converted click in donwload if you want to save it</p>
+                <button id="donwload" class="button shadow" >Image donwload</button>
+            </div>
+
+
+        
+            
+            <!-- load component waiting for fetch response -->
+            <div id="loading">
+                <img src="../static/assets/logo.png" alt="iconLoco">
+                <p>Waiting processing, it will take feels time...</p>
+            </div>
+
+            <!-- <div id="loaded">
+                <img src="" alt="result" id="resultImg">
+            </div> -->
+          
+        </div>
+        <div class="tutorial">
+            <a href="#" id="tutorial" class="shadow">Tutorial</a>
+        </div>
+
+        <!-- popup after donwload modal -->
+        <div id="dModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Thanks for use it!</h3>
+                <p> Consider me a donation for make news free and opensource</p>
+                <p>See bellow links for donation and my social nets</p>
+                <div class="container social">
+                    <div style="grid-column: 1;">
+                        <h3>Follow me in my social networks</h3>
+                        <a href="https://www.facebook.com/agtastudios"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/AGTAStudios"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/Angeloabrita"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/angelo-gabriel-tavares-abrita-79058a38/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div style="grid-column:2;">
+                        <h3>Pay me one cooffe</h3>
+                        <a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=NTVK3A8XG54W2&source=url" class="fab fa-cc-paypal"></a>
+                        <a href="https://twitter.com/AGTAStudios"  class="fab fa-twitter"></a>
+                        <a href="https://github.com/Angeloabrita" class="fab fa-github"></a>
+                        <a href="https://www.linkedin.com/in/angelo-gabriel-tavares-abrita-79058a38/"" class="fab fa-linkedin-in"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        
+    </footer>
+    
+
+    <script src="../static/components.js"></script>
+    <script src="../static/app.js"></script>
+    
+
+    <!-- {% block script %}
+    <script src={{ url_for('static', filename='app.js') }}></script>
+    {% endblock %} -->
+</body>
+</html>
