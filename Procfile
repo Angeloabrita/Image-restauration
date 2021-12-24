@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath repainter serve 
+web: gunicorn --pythonpath repainter serve.app 
