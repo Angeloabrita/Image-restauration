@@ -11,6 +11,7 @@ from flask_wtf.csrf import CSRFProtect
 import restaure
 
 
+
 app = Flask(__name__)
 
 app.config.update(
