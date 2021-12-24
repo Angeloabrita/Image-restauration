@@ -1,7 +1,3 @@
-#https://github.com/JiahuiYu/generative_inpainting
-#https://pythonise.com/series/learning-flask/flask-and-fetch-api
-
-#https://stackoverflow.com/questions/58369348/flask-csrf-and-fetch-api
 from flask import Flask, render_template, request, jsonify, make_response
 import flask
 
