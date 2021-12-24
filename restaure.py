@@ -1,4 +1,3 @@
-#https://stackoverflow.com/questions/67196395/send-and-receive-back-image-by-post-method-in-python-flask
 from __future__ import print_function
 import cv2
 import base64
