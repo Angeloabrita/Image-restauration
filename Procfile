@@ -1,1 +1,1 @@
-web: gunicorn --chdir repainter serve:app 
+web: gunicorn --pythonpath repainter serve:app 
