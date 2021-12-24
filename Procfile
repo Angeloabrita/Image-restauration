@@ -1,1 +1,1 @@
-"web: gunicorn --chdir repainter serve:app" 
+web: gunicorn --chdir repainter serve:app 
