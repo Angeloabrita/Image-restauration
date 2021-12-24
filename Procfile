@@ -1,1 +1,1 @@
-web: gunicorn repainter.serve:app
+web: gunicorn --bind 0.0.0.0:$PORT repainter.serve:app
