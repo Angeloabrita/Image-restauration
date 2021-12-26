@@ -1,1 +1,1 @@
-web: gunicorn serve:app --timeout 1000 --keep-alive-timeout 1000 
+web: gunicorn serve:app --timeout 1000 
