@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT serve:app --timeout 1000
+web: gunicorn serve:app --timeout 120 --keep-alive-timeout 120 --workers 3 --worker-class gevent --log-level debug --log-file -
