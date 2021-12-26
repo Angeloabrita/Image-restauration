@@ -1,1 +1,1 @@
-web: gunicorn serve:app --timeout 120 --keep-alive-timeout 120 --workers 3 --worker-class gevent --log-level debug --log-file -
+web: gunicorn serve:app --timeout 1000 --keep-alive-timeout 1000 
