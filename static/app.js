@@ -223,7 +223,10 @@ function apiRes(sImg, mask, tk) {
  }).then(
    function (res) {
      if(res.status !==200){
-       console.log(`we have a problem ${res.status}`);
+
+      hideLoading();
+      containerDonwload.style.display = "block";
+      
        return;
      }
      res.json().then(function(data){
