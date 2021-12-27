@@ -192,12 +192,14 @@ function displayLoading() {
 }
 
 
-function hideLoading() {
+function hideLoading(status) {
   let loader = document.getElementById('loading');
   let konva = document.getElementById("konva");
 
   loader.classList.remove("display");
-  konva.style.display = "block";
+  if(status){
+    konva.style.display = "block";
+  }
 
   console.log("no hide");
 }
@@ -226,7 +228,8 @@ function apiRes(sImg, mask, tk) {
 
       let error = document.getElementById('error');
 
-      hideLoading();
+      hideLoading(false);
+      error.style.display = "block";
       error.innerHTML = "Error: " + res.status + " Error response time out! I'm working on a solution. For now try to fix small parts of the image at a time " ;
 
       
@@ -239,7 +242,7 @@ function apiRes(sImg, mask, tk) {
       //   sImg.src = `data:image/png;base64,${data['result']}`;
         restauredImg(`data:image/png;base64,${data['result']}`);
          //hide loading component and show the image result
-        hideLoading();
+        hideLoading(true);
         containerDonwload.style.display = "block";
 
 
@@ -283,7 +286,7 @@ function restauredImg(img) {
   })
 
   stage.draw();
-  hideLoading();
+  hideLoading(true);
 
 }
 

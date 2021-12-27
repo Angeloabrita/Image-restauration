@@ -267,7 +267,13 @@ label:hover{
 }
 
 
-
+#error{
+  display: none;
+  grid-column: 2 ;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}
 /* css animations */
 
 /* rotation 360 degre */
