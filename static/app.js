@@ -224,8 +224,11 @@ function apiRes(sImg, mask, tk) {
    function (res) {
      if(res.status !==200){
 
+      let error = document.getElementById('error');
+
       hideLoading();
-      containerDonwload.style.display = "block";
+      error.innerHTML = "Error: " + res.status + " Error response time out! I'm working on a solution. For now try to fix small parts of the image at a time " ;
+
       
        return;
      }
